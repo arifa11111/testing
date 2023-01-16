@@ -27,7 +27,7 @@ context('Amazon Application testing with Cypress',()=>{
             HomePageHands.GoTocart()
             HomePageEyes.ItemQtyShouldBeMininumValue()
         })
-        it('Search for Mobiles',()=>{
+        it('Search for Mobiles and get last mobile details',()=>{
             MobileHands.searchMobiles()
             MobileHands.clickSearchIcon()
             MobileEyes.scrollBottom()

@@ -8,9 +8,9 @@ export class LoginRobotHands extends BaseHands{
     loginUsingCrediantials(){
         cy.fixture('credentials').then((data)=>{
             this.typeTextonId('ap_email',data.email)
-            this.clickOnDomElement('input #continue')
+            this.clickChildDomWithParentDom('input','#continue')
             this.typeTextonId('ap_password',data.password)
-            this.clickOnDomElement('input #signInSubmit')
+            this.clickChildDomWithParentDom('input','#signInSubmit')
         })
     }
 }

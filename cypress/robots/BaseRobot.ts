@@ -281,7 +281,7 @@ export class BaseHands {
   }
 
   clickOnDomElementWithIndex(dom:string,index:number){
-    cy.get(dom).eq(index).click()
+    cy.get(dom,{timeout:2000}).eq(index).click()
     return this;
   }
 

@@ -17,7 +17,7 @@ export class AddressRobotHands extends BaseHands{
         this.clickOnDomElement('#nav-orders')
     }
     selectPrevYearOrderDetails(){
-        this.clickOnDomElementWithIndex('.a-button-inner',1)
+        this.clickOnDomElement('.a-dropdown-prompt')
         this.clickOnDomElementsWithIndex('.a-popover-wrapper','li',4)
     }
     selectFirstItemAndOrder(){

@@ -12,19 +12,20 @@ context('Amazon Application testing with Cypress',()=>{
     
     before(() => {
         AmazonDependencies.visitPage()
-        LoginHands.clickOnLoginBtn()
-        LoginHands.loginUsingCrediantials()
     });
 
 describe('Amazon Application testing After login',()=>{
-    it('check for prime checkbox for item', ()=> {
+    it('Enable prime option for items', ()=> {
+        LoginHands.clickOnLoginBtn()
+        LoginHands.loginUsingCrediantials()
         PrimeHands.clickOnSecondItemGrid()
         PrimeHands.clickOnPrimeCheckBox()
         PrimeHands.getDeliveryDateForItem()
     })
 
-    it('Add payment and address for item', ()=> {
+    it('Add payment and address for ordered item', ()=> {
         DeliveryFormHands.openMyOrders()
+        LoginHands.loginUsingCrediantials()
         DeliveryFormHands.selectPrevYearOrderDetails()
         DeliveryFormHands.selectFirstItemAndOrder()
 
