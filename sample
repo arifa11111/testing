@@ -1,27 +1,20 @@
 pipeline {
 
-agent any
+	agent any
 
+	stages {
 
-stages {
-
-
-	stage('build')
-
-
-		{
-
+		stage('build'){
 
 			steps	{
 
-
-					bat 'npm install typescript'
-
-
-					bat 'npm install cypress --save-dev'              
+					sh 'npm install typescript'
 
 
-					bat 'npm run cypress:run'
+					sh 'npm install cypress --save-dev'              
+
+
+					sh 'npm run cypress:run'
 
 
 				}
