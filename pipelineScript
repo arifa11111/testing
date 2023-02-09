@@ -14,7 +14,7 @@ pipeline {
 					sh 'npm install cypress --save-dev'              
 
 
-					sh 'npm cypress run'
+					sh 'npm run cypress:run'
 
 
 				}
