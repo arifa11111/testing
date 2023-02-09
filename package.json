@@ -10,6 +10,6 @@
   },
   "scripts": {
     "cypress:open": "cypress open --config-file configs/cypress.json",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run --headless"
   }
 }
